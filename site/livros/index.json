@@ -1,0 +1,85 @@
+[
+  {
+    "id": "base-memorias-postumas",
+    "title": "Memórias Póstumas de Brás Cubas",
+    "author": "Machado de Assis",
+    "file": "memorias_posthumas_bras_cubas.txt"
+  },
+  {
+    "id": "base-dom-casmurro",
+    "title": "Dom Casmurro",
+    "author": "Machado de Assis",
+    "file": "dom_casmurro.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943)"
+  },
+  {
+    "id": "base-quincas-borba",
+    "title": "Quincas Borba",
+    "author": "Machado de Assis",
+    "file": "quincas_borba.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943)"
+  },
+  {
+    "id": "base-esau-e-jaco",
+    "title": "Esaú e Jacó",
+    "author": "Machado de Assis",
+    "file": "esau_e_jaco.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943)"
+  },
+  {
+    "id": "base-helena",
+    "title": "Helena",
+    "author": "Machado de Assis",
+    "file": "helena.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943)"
+  },
+  {
+    "id": "base-memorial-de-aires",
+    "title": "Memorial de Aires",
+    "author": "Machado de Assis",
+    "file": "memorial_de_aires.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943)"
+  },
+  {
+    "id": "base-papeis-avulsos",
+    "title": "Papéis Avulsos",
+    "author": "Machado de Assis",
+    "file": "papeis_avulsos.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943)"
+  },
+  {
+    "id": "base-o-cortico",
+    "title": "O Cortiço",
+    "author": "Aluísio Azevedo",
+    "file": "o_cortico.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943)"
+  },
+  {
+    "id": "base-a-escrava-isaura",
+    "title": "A Escrava Isaura",
+    "author": "Bernardo Guimarães",
+    "file": "a_escrava_isaura.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943)"
+  },
+  {
+    "id": "base-iracema",
+    "title": "Iracema",
+    "author": "José de Alencar",
+    "file": "iracema.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943)"
+  },
+  {
+    "id": "base-cinco-minutos",
+    "title": "Cinco Minutos",
+    "author": "José de Alencar",
+    "file": "cinco_minutos.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943)"
+  },
+  {
+    "id": "base-a-mao-e-a-luva",
+    "title": "A Mão e a Luva",
+    "author": "Machado de Assis",
+    "file": "a_mao_e_a_luva.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943)"
+  }
+]

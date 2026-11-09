@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digitando</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="topbar">
+    <a class="brand" href="#praticar" aria-label="Digitando - início">
+      <span class="logo" aria-hidden="true"></span><span class="brand-name">Digitando</span>
+    </a>
+    <div class="hud" id="hud" aria-label="Seu progresso"></div>
+    <div class="theme-wrap">
+      <button id="theme-toggle" class="icon-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu">Tema</button>
+      <div id="theme-menu" class="theme-menu" role="group" aria-label="Escolher tema de cor" hidden></div>
+    </div>
+    <nav class="tabs" aria-label="Seções">
+      <a href="#praticar" data-tab="praticar">Praticar</a>
+      <a href="#aprender" data-tab="aprender">Aprender</a>
+      <a href="#programar" data-tab="programar">Programar</a>
+      <a href="#biblioteca" data-tab="biblioteca">Biblioteca</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- PRATICAR -->
+    <section id="view-praticar" class="view" hidden>
+      <div class="stats-panel" id="stats-panel"></div>
+
+      <div class="panel controls">
+        <label>Livro
+          <select id="sel-book"></select>
+        </label>
+        <label>Tamanho
+          <select id="sel-size">
+            <option value="curto">Curto (~25 palavras)</option>
+            <option value="medio" selected>Médio (~50 palavras)</option>
+            <option value="longo">Longo (~90 palavras)</option>
+          </select>
+        </label>
+        <label>Trecho
+          <select id="sel-mode">
+            <option value="aleatorio" selected>Aleatório</option>
+            <option value="continuar">Continuar de onde parei</option>
+          </select>
+        </label>
+        <button id="btn-new" class="btn primary">Novo trecho</button>
+      </div>
+
+      <div id="practice-typing"></div>
+      <div id="practice-result" class="panel result" hidden></div>
+    </section>
+
+    <!-- APRENDER -->
+    <section id="view-aprender" class="view" hidden>
+      <div class="learn-layout">
+        <aside id="course-map" class="course-map"></aside>
+        <div id="lesson-view" class="lesson-view"></div>
+      </div>
+    </section>
+
+    <!-- PROGRAMAR -->
+    <section id="view-programar" class="view" hidden>
+      <div class="stats-panel" id="code-stats"></div>
+
+      <div class="panel controls">
+        <label>Linguagem
+          <select id="code-lang"></select>
+        </label>
+        <label>Tamanho
+          <select id="code-size"></select>
+        </label>
+        <button id="code-new" class="btn primary">Novo trecho</button>
+      </div>
+
+      <div id="code-typing"></div>
+      <div id="code-result" class="panel result" hidden></div>
+    </section>
+
+    <!-- BIBLIOTECA -->
+    <section id="view-biblioteca" class="view" hidden>
+      <div class="panel">
+        <h2>Enviar livro</h2>
+        <label id="dropzone" class="dropzone">
+          <input type="file" id="file-input" accept=".txt,.epub,text/plain,application/epub+zip" multiple hidden>
+          <strong>Arraste um arquivo .txt ou .epub aqui</strong>
+          <span>ou clique para escolher</span>
+        </label>
+        <p class="muted" id="upload-msg" role="status"></p>
+        <p class="muted small">Seus livros ficam salvos apenas neste navegador (nada é enviado para servidores). Limpar os dados do site apaga a biblioteca.</p>
+      </div>
+      <div class="panel">
+        <h2>Livros base</h2>
+        <ul id="list-base" class="book-list"></ul>
+      </div>
+      <div class="panel">
+        <h2>Meus livros</h2>
+        <ul id="list-mine" class="book-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <footer class="footer muted small">Dica: <kbd>Esc</kbd> reinicia o exercício · <kbd>Enter</kbd> avança nos resultados.</footer>
+</body>
+</html>

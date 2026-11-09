@@ -1,0 +1,46 @@
+# ---------- Python (digitador.py legado) ----------
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# ---------- Ferramentas de IA / editores ----------
+# Skills, prompts e configurações de terceiros que cada ferramenta instala; não fazem parte do site.
+# (CLAUDE.md, na raiz, continua versionado.)
+.agents/
+.augment/
+.claude/
+.codebuddy/
+.codewhale/
+.continue/
+.cursor/
+.factory/
+.gemini/
+.kilocode/
+.kiro/
+.opencode/
+.qoder/
+.roo/
+.trae/
+.warp/
+.windsurf/
+.github/prompts/
+CLAUDE.local.md
+
+# ---------- Editores e sistema operacional ----------
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Temporários ----------
+node_modules/
+*.log
+*.tmp
+*.bak
+_t*.html
+design-system/
