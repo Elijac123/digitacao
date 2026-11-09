@@ -8,7 +8,13 @@ export const THEMES = [
   { id: "lavanda", name: "Lavanda", dark: false, bg: "#f0ebfa", ac: "#6a49c2" },
   { id: "pessego", name: "Pêssego", dark: false, bg: "#fdf0e6", ac: "#b84d14" },
   { id: "areia", name: "Areia", dark: false, bg: "#f3efe6", ac: "#5c6b3a" },
+  { id: "tropical", name: "Tropical", dark: false, multi: true, bg: "#fff4e0", ac: "#0f7b78", m: ["#0f7b78", "#e0592a", "#e0a100", "#3b82c4"] },
+  { id: "arcoiris", name: "Arco-íris", dark: false, multi: true, bg: "#f7f9ff", ac: "#2a5bd7", m: ["#e5484d", "#f08a1a", "#2fa84f", "#7a4fd6"] },
   { id: "floresta", name: "Floresta", dark: true, bg: "#14231a", ac: "#86d99a" },
+  { id: "synthwave", name: "Synthwave", dark: true, multi: true, bg: "#1a1033", ac: "#ff6fb5", m: ["#ff6fb5", "#5ee6f0", "#ffd24d", "#a78bfa"] },
+  { id: "brasa", name: "Brasa", dark: true, multi: true, bg: "#0f2326", ac: "#ff8a4c", m: ["#ff8a4c", "#7ee0d6", "#ffd24d", "#f27ab0"] },
+  { id: "neon", name: "Neon", dark: true, multi: true, bg: "#0b0b14", ac: "#39e6b0", m: ["#ff4fa3", "#4dc9ff", "#ffe14d", "#39e6b0"] },
+  { id: "aurora", name: "Aurora", dark: true, multi: true, bg: "#0d1b2a", ac: "#b78cff", m: ["#7cf0c9", "#b78cff", "#ff8fb1", "#ffd36b"] },
   { id: "noite", name: "Noite", dark: true, bg: "#0f1824", ac: "#7db4f5" },
   { id: "grafite", name: "Grafite", dark: true, bg: "#161616", ac: "#f0b24a" },
 ];
@@ -29,6 +35,7 @@ export function applyTheme(id) {
   const root = document.documentElement;
   root.setAttribute("data-theme", th.id);
   root.setAttribute("data-mode", th.dark ? "dark" : "light");
+  if (th.multi) root.setAttribute("data-multi", ""); else root.removeAttribute("data-multi");
   return th;
 }
 
@@ -39,7 +46,7 @@ export function initThemePicker() {
 
   const opt = (t) =>
     `<button class="theme-opt" type="button" data-id="${t.id}" aria-pressed="${t.id === current}">
-      <span class="sw" style="--sw-bg:${t.bg};--sw-ac:${t.ac}" aria-hidden="true"></span>${esc(t.name)}</button>`;
+      <span class="sw" style="--sw-bg:${t.bg};--sw-ac:${t.ac}${t.m ? `;--sw-bg:${t.bg};background:linear-gradient(90deg,${t.m[0]} 25%,${t.m[1]} 25% 50%,${t.m[2]} 50% 75%,${t.m[3]} 75%)` : ""}" aria-hidden="true"></span>${esc(t.name)}</button>`;
   const render = () => {
     menu.innerHTML =
       `<div class="theme-group">Claros</div>${THEMES.filter((t) => !t.dark).map(opt).join("")}` +
