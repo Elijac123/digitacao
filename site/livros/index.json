@@ -81,5 +81,61 @@
     "author": "Machado de Assis",
     "file": "a_mao_e_a_luva.txt",
     "note": "ortografia antiga (anterior à reforma de 1943)"
+  },
+  {
+    "id": "base-policarpo-quaresma",
+    "title": "Triste Fim de Policarpo Quaresma",
+    "author": "Lima Barreto",
+    "file": "triste_fim_de_policarpo_quaresma.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943); 1915"
+  },
+  {
+    "id": "base-a-cidade-e-as-serras",
+    "title": "A Cidade e as Serras",
+    "author": "Eça de Queirós",
+    "file": "a_cidade_e_as_serras.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943); 1901"
+  },
+  {
+    "id": "base-a-illustre-casa-de-ramires",
+    "title": "A Ilustre Casa de Ramires",
+    "author": "Eça de Queirós",
+    "file": "a_illustre_casa_de_ramires.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943); 1900"
+  },
+  {
+    "id": "base-os-maias",
+    "title": "Os Maias",
+    "author": "Eça de Queirós",
+    "file": "os_maias.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943); livro longo (1888)"
+  },
+  {
+    "id": "base-lendas-do-sul",
+    "title": "Lendas do Sul",
+    "author": "Simões Lopes Neto",
+    "file": "lendas_do_sul.txt",
+    "note": "1913; contos gaúchos"
+  },
+  {
+    "id": "base-era-uma-vez",
+    "title": "Era uma vez...",
+    "author": "Júlia Lopes de Almeida",
+    "file": "era_uma_vez.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943); 1917; contos curtos"
+  },
+  {
+    "id": "base-humus",
+    "title": "Húmus",
+    "author": "Raul Brandão",
+    "file": "humus.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943); 1917"
+  },
+  {
+    "id": "base-os-pobres",
+    "title": "Os Pobres",
+    "author": "Raul Brandão",
+    "file": "os_pobres.txt",
+    "note": "ortografia antiga (anterior à reforma de 1943); 1906"
   }
 ]

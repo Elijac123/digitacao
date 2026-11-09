@@ -83,8 +83,12 @@ Contrastes foram **calculados à mão** (não medidos com ferramenta): texto sob
 | **Verde** (padrão, é o próprio `:root`) | **Floresta** |
 | Azul | Noite |
 | Lavanda | Grafite |
-| Pêssego | |
-| Areia | |
+| Pêssego | Synthwave |
+| Areia | Brasa |
+| Tropical | Neon |
+| Arco-íris | Aurora |
+
+- **Multicoloridos** (Tropical, Arco-íris, Synthwave, Brasa, Neon, Aurora): além de fundo e acento, definem `--m1..--m4` (4 cores) e `multi: true` em `THEMES`, que põe `data-multi` no `<html>`. Com isso o logo vira listras, cada aba tem sublinhado de uma cor, os 4 cartões de estatística e os painéis alternam as bordas laterais, e a amostra no menu mostra as 4 cores. Contrastes calculados à mão.
 
 - O JS define `data-theme="<id>"` e `data-mode="light|dark"` no `<html>`. `data-mode="dark"` carrega variáveis comuns dos escuros (vermelhos, tiers, teclado).
 - Escolha salva em `localStorage` (`tema`); valores antigos `light`/`dark` migram para `verde`/`floresta`. Sem escolha, segue o tema do sistema.

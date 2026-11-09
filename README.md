@@ -4,12 +4,12 @@ Site de treino de digitação em português do Brasil, feito para o **teclado AB
 
 ## O que tem
 
-- **Praticar** — digite trechos de livros de domínio público (ou de livros que você enviar). Escolha o livro (ou "Livro aleatório"), o tamanho do trecho e se quer um trecho aleatório ou continuar de onde parou. Mostra WPM, precisão, tempo, teclas com mais erros, recorde e médias.
+- **Praticar** — digite trechos de livros de domínio público (ou de livros que você enviar). Escolha o livro (ou "Livro aleatório", "Textos de IA" — 1000 textos curtos escritos por IA — ou uma das suas listas, em negrito), o tamanho do trecho e se quer um trecho aleatório ou continuar de onde parou. Mostra WPM, precisão, tempo, teclas com mais erros, recorde e médias.
 - **Aprender** — curso em lições (33 no total): fileira base, superior e inferior, maiúsculas, números e pontuação, acentos do português e fluência. Cada lição tem etapas, metas de precisão e velocidade, nota de até 3 estrelas e um teclado virtual ABNT2 com a indicação do dedo certo.
 - **Programar** — treino de velocidade digitando código, com 93 trechos em 11 linguagens (JavaScript, Python, TypeScript, Java, C, C++, C#, SQL, HTML, CSS e Bash). O Enter quebra a linha e a indentação é preenchida sozinha.
-- **Biblioteca** — 12 livros base e upload de `.txt` e `.epub` (ficam guardados no seu navegador, nada é enviado a servidor algum).
+- **Biblioteca** — 20 livros base, listas personalizadas com nome (marque livros e, em Praticar, sorteie só entre eles; a lista "Livros adicionados" reúne o que você enviou) e upload de `.txt` e `.epub` (ficam guardados no seu navegador, nada é enviado a servidor algum).
 - **Jogo** — XP, níveis, ofensiva (dias seguidos treinando) e 55 conquistas em 4 níveis de dificuldade.
-- **8 temas de cor** — 5 claros (Verde, Azul, Lavanda, Pêssego, Areia) e 3 escuros (Floresta, Noite, Grafite), pelo botão "Tema".
+- **12 temas de cor** — 7 claros (Verde, Azul, Lavanda, Pêssego, Areia, Tropical, Arco-íris) e 7 escuros (Floresta, Noite, Grafite, Synthwave, Brasa, Neon, Aurora), pelo botão "Tema".
 
 ### Regras da digitação
 

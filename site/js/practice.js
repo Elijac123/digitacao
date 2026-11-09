@@ -1,8 +1,9 @@
 // Aba Praticar: trechos de livros, estatísticas persistentes (recorde, média, última).
 import { Typer, buildTypingCard } from "./typing.js";
-import { listAll, getText, getPos, setPos, libraryEvents } from "./library.js";
+import { listAll, getPracticeLists, getText, getPos, setPos, libraryEvents } from "./library.js";
 import { load, save, KEYS } from "./storage.js";
 import { toAbnt2 } from "./abnt2.js";
+import { loadAiTexts, pickAiExcerpt, aiCount, AI_TITLE } from "./textosIA.js";
 import { gainXp, practiceXp, xpSummaryHtml } from "./gamify.js";
 
 const SIZES = { curto: 25, medio: 50, longo: 90 };
@@ -88,8 +89,16 @@ function savePrefs() {
 const RANDOM = "__aleatorio__"; // opção "Livro aleatório": sorteia um livro a cada novo trecho
 let lastRandom = null;
 
-function pickRandomBook() {
-  const books = listAll();
+const IA = "__ia__"; // opção "Textos de IA": textos curtos escritos por IA (textosIA.js)
+const AI_BOOK = { id: IA, title: AI_TITLE };
+const LISTA = "__lista__:"; // opção "<lista>" (em negrito): sorteia entre os livros da lista; o resto é o id da lista
+
+function pickRandomBook(listBooks = null) {
+  let books = listAll();
+  if (listBooks) {
+    const ids = new Set(listBooks);
+    books = books.filter((b) => ids.has(b.id));
+  }
   const pool = books.length > 1 ? books.filter((b) => b.id !== lastRandom) : books; // evita repetir o mesmo livro em seguida
   lastRandom = pool[Math.floor(Math.random() * pool.length)].id;
   return lastRandom;
@@ -99,14 +108,21 @@ function fillBooks() {
   const sel = $("#sel-book");
   const p = prefs();
   const books = listAll();
-  sel.innerHTML = books.length
-    ? `<option value="${RANDOM}">Livro aleatório</option>` + books.map((b) => `<option value="${b.id}">${esc(b.title)}${b.author ? " — " + esc(b.author) : ""}</option>`).join("")
-    : `<option value="">(nenhum livro — vá em Biblioteca)</option>`;
-  if (p.book === RANDOM || (p.book && books.some((b) => b.id === p.book))) sel.value = p.book;
+  const lists = getPracticeLists();
+  sel.innerHTML =
+    (books.length ? `<option value="${RANDOM}">Livro aleatório</option>` : "") +
+    `<option value="${IA}">${AI_TITLE}${aiCount() ? ` (${aiCount()} textos)` : ""}</option>` +
+    lists.map((l) => `<option class="opt-list" style="font-weight:700" value="${LISTA}${l.id}">${esc(l.name)} (aleatório, ${l.books.length})</option>`).join("") +
+    books.map((b) => `<option value="${b.id}">${esc(b.title)}${b.author ? " — " + esc(b.author) : ""}</option>`).join("");
+  if (p.book === RANDOM || p.book === IA || (p.book?.startsWith(LISTA) && lists.some((l) => LISTA + l.id === p.book)) || (p.book && books.some((b) => b.id === p.book))) sel.value = p.book;
   else if (books.length) sel.value = books[0].id; // padrão: primeiro livro (o aleatório é opt-in)
   if (p.size) $("#sel-size").value = p.size;
   if (p.mode) $("#sel-mode").value = p.mode;
+  markList();
 }
+
+/** Seletor fechado também em negrito quando uma lista está escolhida. */
+function markList() { $("#sel-book").classList.toggle("is-list", $("#sel-book").value.startsWith(LISTA)); }
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
@@ -115,6 +131,7 @@ async function newExcerpt() {
   typer = null;
   resultOpen = false;
   $("#practice-result").hidden = true;
+  markList();
   const choice = $("#sel-book").value;
   const area = $("#practice-typing");
   if (!choice) {
@@ -122,7 +139,8 @@ async function newExcerpt() {
     return;
   }
   savePrefs();
-  const bookId = choice === RANDOM ? pickRandomBook() : choice;
+  if (choice === IA) return aiExcerpt(area);
+  const bookId = choice === RANDOM ? pickRandomBook() : choice.startsWith(LISTA) ? pickRandomBook(getPracticeLists().find((l) => LISTA + l.id === choice)?.books ?? []) : choice;
   let text;
   try { text = await getText(bookId); } catch (e) { area.innerHTML = `<div class="panel">Erro ao abrir o livro: ${esc(e.message)}</div>`; return; }
   const book = listAll().find((b) => b.id === bookId);
@@ -137,7 +155,7 @@ async function newExcerpt() {
   current = { bookId, endIdx: endIdx >= list.length ? 0 : endIdx, startIdx: start, total: list.length };
 
   ui = buildTypingCard(area, { hint: "Digite o texto acima. <kbd>Esc</kbd> sorteia outro trecho." });
-  ui.title.textContent = `${book?.title ?? ""}${choice === RANDOM ? " (sorteado)" : ""} · trecho ${Math.round((start / list.length) * 100)}% do livro`;
+  ui.title.textContent = `${book?.title ?? ""}${choice === RANDOM || choice.startsWith(LISTA) ? " (sorteado)" : ""} · trecho ${Math.round((start / list.length) * 100)}% do livro`;
   typer = new Typer({
     ui, text: excerpt,
     onDone: (st) => finish(st, book),
@@ -146,9 +164,23 @@ async function newExcerpt() {
   typer.focus();
 }
 
+async function aiExcerpt(area) {
+  let excerpt;
+  try {
+    excerpt = toAbnt2((await pickAiExcerpt(SIZES[$("#sel-size").value] || 50)).normalize("NFC")); // mesma normalização dos livros
+    if (!aiCount()) throw new Error("sem textos");
+  } catch (e) { area.innerHTML = `<div class="panel">Não foi possível abrir os textos de IA: ${esc(e.message)}</div>`; return; }
+  if ($("#sel-book").value !== IA) return; // o usuário mudou de opção enquanto carregava
+  current = { bookId: IA, ai: true };
+  ui = buildTypingCard(area, { hint: "Digite o texto acima. <kbd>Esc</kbd> sorteia outro trecho." });
+  ui.title.textContent = `${AI_TITLE} · ${aiCount()} textos`;
+  typer = new Typer({ ui, text: excerpt, onDone: (st) => finish(st, AI_BOOK), onEscape: newExcerpt });
+  typer.focus();
+}
+
 function finish(st, book) {
   const isRecord = recordResult(st, book?.title ?? "");
-  setPos(current.bookId, current.endIdx); // avança "continuar de onde parei"
+  if (!current.ai) setPos(current.bookId, current.endIdx); // avança "continuar de onde parei"
   const xp = gainXp(practiceXp(st, isRecord), { type: "practice", wpm: st.wpm, acc: st.acc, chars: st.length });
   const worst = Object.entries(st.errMap).sort((a, b) => b[1] - a[1]).slice(0, 5)
     .map(([k, n]) => `<kbd>${k === " " ? "espaço" : esc(k)}</kbd> ×${n}`).join(" ");
@@ -183,7 +215,7 @@ function retry(text) {
   const title = ui.title.textContent;
   ui = buildTypingCard(area, { hint: "Digite o texto acima. <kbd>Esc</kbd> sorteia outro trecho." });
   ui.title.textContent = title + " (repetição)";
-  typer = new Typer({ ui, text, onDone: (st) => finish(st, listAll().find((b) => b.id === current.bookId)), onEscape: newExcerpt });
+  typer = new Typer({ ui, text, onDone: (st) => finish(st, current.ai ? AI_BOOK : listAll().find((b) => b.id === current.bookId)), onEscape: newExcerpt });
   typer.focus();
 }
 
@@ -199,6 +231,7 @@ export function initPractice() {
   });
   fillBooks();
   renderStats();
+  loadAiTexts().then(fillBooks).catch(() => {}); // mostra a contagem de textos no seletor
 }
 
 export function showPractice() {

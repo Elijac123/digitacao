@@ -94,6 +94,24 @@
         <p class="muted small">Seus livros ficam salvos apenas neste navegador (nada é enviado para servidores). Limpar os dados do site apaga a biblioteca.</p>
       </div>
       <div class="panel">
+        <h2>Minhas listas</h2>
+        <p class="muted small">Crie listas com os nomes que quiser e marque as caixas dos livros abaixo para montá-las. Em Praticar, cada lista aparece em negrito e sorteia um livro dela a cada trecho. A lista "Livros adicionados" é automática: reúne tudo o que você enviou.</p>
+        <div class="list-bar">
+          <label class="list-pick">Lista em edição
+            <select id="sel-list"></select>
+          </label>
+          <button class="btn primary" id="btn-list-new" type="button">Nova lista</button>
+          <button class="btn" id="btn-list-rename" type="button" hidden>Renomear</button>
+          <button class="btn" id="btn-list-delete" type="button" hidden>Excluir</button>
+        </div>
+        <div class="list-bar">
+          <strong id="list-count" role="status"></strong>
+          <button class="btn" id="btn-list-all" type="button" hidden>Marcar todos</button>
+          <button class="btn" id="btn-list-clear" type="button" hidden>Limpar lista</button>
+          <button class="btn primary" id="btn-list-practice" type="button" hidden>Praticar com a lista</button>
+        </div>
+      </div>
+      <div class="panel">
         <h2>Livros base</h2>
         <ul id="list-base" class="book-list"></ul>
       </div>

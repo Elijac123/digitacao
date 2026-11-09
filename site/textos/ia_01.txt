@@ -1,0 +1,90 @@
+Um algoritmo é apenas uma receita: uma sequência de passos claros que transforma os dados de entrada em um resultado útil, seja ordenar uma lista ou sugerir a próxima música.
+A internet nasceu como uma rede para ligar poucos computadores de universidades e hoje conecta bilhões de pessoas, aparelhos e serviços em todos os cantos do planeta.
+Toda senha forte tem três qualidades: é longa, é única para cada serviço e não faz referência a datas ou nomes que alguém poderia adivinhar com facilidade.
+O armazenamento em nuvem não flutua no céu. Ele fica em enormes galpões cheios de servidores, que consomem energia e precisam ser resfriados dia e noite.
+Quando um aplicativo trava, quase sempre o problema está em um detalhe pequeno, como uma variável vazia ou uma conexão que demorou mais do que o esperado.
+Programar é a arte de explicar uma tarefa a uma máquina que obedece a tudo, mas não entende nada além do que foi escrito, nem mesmo a intenção de quem escreveu.
+Os primeiros computadores ocupavam salas inteiras e tinham menos capacidade do que um relógio de pulso moderno. A evolução da eletrônica foi uma das mais rápidas da história.
+Uma boa interface não precisa de manual. Quando o botão certo está no lugar certo, a pessoa nem percebe que está usando tecnologia, apenas resolve o que queria.
+O backup é como um guarda-chuva: ninguém lembra dele num dia de sol, mas na primeira tempestade ele faz toda a diferença entre um susto e uma perda irreparável.
+Redes sem fio funcionam enviando informação por ondas de rádio. Paredes grossas e outros aparelhos podem enfraquecer o sinal, por isso a posição do roteador importa bastante.
+Um bom programador gasta mais tempo lendo código do que escrevendo. Por isso, nomes claros e funções pequenas valem mais do que truques inteligentes difíceis de entender.
+O teclado que usamos hoje herdou a disposição das letras das antigas máquinas de escrever, criada para evitar que as hastes metálicas se enroscassem durante a digitação.
+Criptografia é a técnica de embaralhar uma mensagem de modo que apenas quem tem a chave correta consiga lê-la. Ela protege desde conversas simples até transações bancárias.
+Quando você apaga um arquivo, o sistema normalmente só marca aquele espaço como livre. O conteúdo continua lá até que algo novo seja gravado por cima.
+A inteligência artificial aprende a partir de exemplos. Quanto mais variados e bem organizados forem esses exemplos, melhor ela tende a responder em situações novas.
+Pequenos atrasos de milissegundos passam despercebidos em uma conversa, mas em um jogo online podem decidir quem vence uma disputa entre dois jogadores rápidos.
+O código aberto permite que qualquer pessoa leia, estude e melhore um programa. Muitos dos sistemas que sustentam a internet nasceram de grupos de voluntários espalhados pelo mundo.
+Atualizar um sistema pode parecer um incômodo, mas muitas vezes traz correções de segurança que fecham brechas descobertas depois do lançamento da versão anterior.
+Um endereço de internet é como um endereço de casa: o nome fácil de lembrar é traduzido por um serviço especial para os números que as máquinas realmente usam.
+A tela sensível ao toque detecta pequenas mudanças elétricas causadas pelo dedo. Por isso luvas comuns não funcionam, a menos que tenham fios condutores nas pontas.
+Antes de compartilhar uma notícia que parece incrível, vale conferir a fonte, a data e se outros veículos confiáveis também publicaram a mesma informação.
+Um banco de dados organiza informações em tabelas, de forma que seja possível encontrar um cliente, um produto ou um pedido em instantes, mesmo entre milhões de registros.
+Os robôs de aspirar pó mapeiam a casa com sensores e voltam sozinhos para a base quando a bateria está quase no fim. Ainda assim, de vez em quando se perdem embaixo do sofá.
+O primeiro e-mail da história foi enviado em 1971, entre dois computadores que estavam lado a lado na mesma sala. A mensagem em si ninguém lembra mais qual era.
+Um bom tutorial começa pelo resultado final e depois explica cada passo. Assim, quem lê sabe aonde vai chegar e percebe quando algo deu errado no meio do caminho.
+A bateria dura mais quando não é deixada totalmente vazia nem sempre no máximo. Manter a carga entre vinte e oitenta por cento costuma prolongar a vida útil do aparelho.
+Os navegadores guardam pequenos arquivos chamados cookies para lembrar suas preferências. Eles são úteis, mas também podem registrar por quais páginas você passou.
+Em um projeto de software, o erro mais caro é o que só aparece depois da entrega. Testes automáticos existem justamente para encontrá-lo enquanto ainda é barato corrigir.
+Uma impressora em três dimensões constrói objetos camada por camada, derretendo um fio de plástico e depositando o material exatamente onde o desenho digital mandar.
+Digitar sem olhar para o teclado parece mágica no começo, mas é apenas memória muscular. Cada dedo aprende uma região, e a prática repetida faz o resto do trabalho.
+O sinal de satélite leva uma fração de segundo para ir e voltar, e é por isso que ligações internacionais por satélite às vezes têm aquele pequeno atraso na resposta.
+Um vírus de computador não é um ser vivo, mas se comporta de forma parecida: copia a si mesmo e se espalha de máquina em máquina quando encontra uma porta aberta.
+A resolução de uma tela indica quantos pontos de cor ela consegue mostrar. Quanto maior o número, mais detalhes aparecem, desde que o conteúdo também seja de boa qualidade.
+Reiniciar o computador resolve tantos problemas porque limpa a memória e recomeça todos os processos do zero, desfazendo pequenos erros que se acumularam durante o uso.
+Um assistente de voz transforma o som em texto, interpreta o que foi pedido e então executa uma ação. Cada uma dessas etapas pode errar, especialmente em ambientes barulhentos.
+A fibra óptica transmite informação por pulsos de luz dentro de um fio de vidro mais fino que um cabelo, o que permite velocidades muito altas e quase nenhuma interferência.
+Aprender a programar muda a forma de pensar. A pessoa começa a dividir problemas grandes em partes pequenas, mesmo quando está resolvendo algo que nada tem a ver com computadores.
+Uma conta com verificação em duas etapas exige algo além da senha, como um código enviado ao celular. Mesmo que a senha vaze, o invasor ainda precisa passar por essa segunda barreira.
+Os emojis surgiram no Japão, nos anos noventa, como pequenos desenhos para facilitar mensagens curtas. Hoje fazem parte de quase todas as conversas digitais do mundo.
+Quando o computador esquenta demais, o processador reduz a velocidade para se proteger. Por isso, limpar a poeira das ventoinhas ajuda bastante o desempenho em dias quentes.
+Um relógio inteligente mede os batimentos do coração com uma luz verde que atravessa a pele. As variações na cor refletida indicam quanto sangue passa naquele instante.
+A realidade virtual engana o cérebro mostrando a cada olho uma imagem ligeiramente diferente, criando a sensação de profundidade e de estar dentro de outro lugar.
+Nenhum software é perfeito. O que diferencia uma equipe cuidadosa de uma descuidada é a rapidez com que ela descobre os erros, admite que existem e os corrige.
+O formato de um arquivo define como a informação está organizada dentro dele. Por isso uma foto salva como imagem não abre em um programa feito apenas para ler planilhas.
+Quando duas pessoas editam o mesmo documento ao mesmo tempo, o sistema compara as mudanças de cada uma e as une em uma única versão sem apagar o trabalho de ninguém.
+Um drone se mantém no ar ajustando a velocidade de cada hélice dezenas de vezes por segundo. Pequenos sensores de equilíbrio dizem ao computador interno quando ele começa a inclinar.
+A memória de um computador é rápida, mas esquece tudo quando a energia acaba. Já o disco guarda os dados por muitos anos, mesmo desligado, embora seja bem mais lento.
+Um arquivo compactado ocupa menos espaço porque trechos repetidos são substituídos por referências curtas. Na hora de abrir, o programa refaz o caminho inverso e devolve o original.
+A primeira pergunta diante de um problema técnico deve ser: o que mudou desde a última vez que funcionava? Quase sempre a resposta aponta diretamente para a causa.
+O comércio eletrônico mudou os hábitos de consumo. Hoje é possível comprar um livro, um sapato ou um sofá sem sair de casa e receber tudo na porta em poucos dias.
+Um bom design de site pensa primeiro em quem vai usá-lo: letras legíveis, contraste suficiente e botões grandes o bastante para serem tocados sem erro em uma tela pequena.
+A taxa de atualização de uma tela indica quantas vezes por segundo a imagem é renovada. Valores altos deixam os movimentos mais suaves, o que ajuda principalmente em jogos.
+Os códigos de barras guardam um número que o leitor consegue ler porque as barras brancas e pretas refletem a luz de formas diferentes, formando um padrão único para cada produto.
+Quando você envia uma foto pelo celular, ela é dividida em pequenos pacotes que viajam por caminhos diferentes e se reúnem de novo no aparelho de quem recebe.
+A linguagem de programação não importa tanto quanto a clareza do raciocínio. Quem entende bem a lógica consegue aprender uma nova linguagem em semanas, não em anos.
+Um servidor é apenas um computador que fica ligado o tempo todo esperando pedidos. Quando você abre uma página, ele recebe o pedido, procura o conteúdo e devolve a resposta.
+Aplicativos de mapa calculam a rota mais rápida comparando milhares de caminhos possíveis e levando em conta o trânsito informado por outros motoristas naquele mesmo momento.
+Uma fotografia digital é uma grade enorme de pontos coloridos. Quando você amplia demais, cada ponto fica visível e a imagem parece feita de pequenos quadrados.
+A privacidade online começa por pequenos hábitos: revisar permissões de aplicativos, desconfiar de links inesperados e não usar a mesma senha em todos os lugares.
+Em muitos jogos eletrônicos, o cenário não existe inteiro o tempo todo. O programa desenha apenas o que está perto do jogador e esquece o resto, para economizar força do processador.
+Um bom comentário no código explica o porquê de uma decisão, não o quê. O que o código faz já aparece nele mesmo; o motivo de ter sido escrito assim, não.
+Ao conectar um fone sem fio, os dois aparelhos trocam um pequeno código para se reconhecerem. Depois disso, a música viaja pelo ar como um fluxo contínuo de dados.
+O teclado de um celular tenta adivinhar a próxima palavra com base no que você já escreveu antes. Quanto mais você o usa, mais ele aprende o seu jeito de escrever.
+Antes da era digital, uma carta levava dias para chegar. Hoje, uma mensagem cruza o oceano em instantes, e ainda assim algumas pessoas reclamam quando a resposta demora um minuto.
+A computação quântica usa as estranhas regras da física de partículas para resolver certos problemas muito mais rápido do que qualquer computador comum conseguiria.
+Um sistema operacional é o gerente da máquina: distribui a memória, controla os programas abertos e cuida de conversar com o teclado, a tela e todos os outros acessórios.
+Quem trabalha com tecnologia aprende cedo que nada é definitivo. As ferramentas mudam a cada poucos anos, e a capacidade de aprender continuamente vale mais do que qualquer uma delas.
+A velocidade de digitação melhora com o hábito diário. Dez minutos por dia, com atenção à precisão, rendem mais do que uma hora corrida feita apenas uma vez por semana.
+Cada página que você visita é montada por três ingredientes: a estrutura em marcação, o estilo que define cores e tamanhos, e o código que adiciona comportamento e interação.
+Um programa de reconhecimento de rosto transforma a imagem em uma lista de números que descrevem distâncias entre pontos do rosto e depois compara essa lista com as que conhece.
+Dados são valiosos, mas só viram conhecimento quando alguém os organiza, os interpreta e faz as perguntas certas. Uma planilha enorme sem pergunta é apenas um monte de números.
+Ao pesquisar na internet, vale experimentar palavras diferentes. Muitas vezes a resposta está escondida atrás de um termo técnico que você ainda não conhecia.
+O som digital é formado por milhares de amostras por segundo. Quanto mais amostras, mais fiel é a reprodução, mas também maior fica o arquivo guardado no aparelho.
+Um fórum de ajuda funciona quando as perguntas são claras: descreva o que tentou, mostre a mensagem de erro e diga qual era o resultado esperado. Assim, a resposta vem mais rápido.
+O carregador do celular converte a corrente alternada da tomada em corrente contínua de baixa tensão, que é o tipo de energia que a bateria consegue armazenar com segurança.
+Em um jogo bem projetado, a dificuldade cresce aos poucos. O jogador sempre sente que está quase conseguindo, e é essa sensação que o faz tentar mais uma vez.
+Os primeiros sites eram páginas simples de texto com links azuis. Hoje, uma única página pode carregar vídeos, mapas, pagamentos e conversas ao vivo ao mesmo tempo.
+O hábito de dar nomes descritivos aos arquivos economiza muito tempo no futuro. Uma pasta chamada relatório final novo versão três não ajuda ninguém seis meses depois.
+A manutenção preventiva de um sistema é invisível quando funciona. Ninguém aplaude o servidor que ficou no ar por um ano inteiro, mas todos reclamam no minuto em que ele cai.
+Os sensores de um carro moderno medem velocidade, distância e pressão dos pneus, enviando tudo para um computador de bordo que avisa o motorista quando algo foge do normal.
+Um tradutor automático compara frases inteiras com milhões de exemplos já traduzidos. Por isso costuma acertar bem o sentido geral, mas ainda tropeça em expressões e ironias.
+A velocidade da internet contratada é um máximo teórico. Na prática, ela divide espaço com todos os aparelhos da casa e depende da qualidade do cabo, do roteador e da distância.
+Quem aprende a automatizar tarefas repetitivas ganha tempo para o que realmente exige criatividade. Um pequeno script escrito em uma tarde pode poupar horas de trabalho durante anos.
+Um aplicativo leve abre rápido, gasta pouca bateria e funciona até em aparelhos mais antigos. Isso mostra respeito por quem usa, e nem sempre é fácil de conseguir.
+A tecnologia sozinha não resolve problemas humanos. Ela amplia o alcance das boas decisões, mas também amplia o efeito das más, por isso vale pensar antes de apertar o botão.
+Um painel de controle bem feito mostra poucos números, mas os certos. Quando há informação demais na tela, a atenção se perde e a decisão importante acaba passando sem ser vista.
+A rede elétrica e a rede de dados dependem uma da outra. Sem energia, nenhum servidor funciona, e sem informação, ninguém consegue coordenar o conserto de uma linha caída.
+Quando uma câmera detecta movimento, ela compara quadros consecutivos do vídeo. Se muitos pontos mudaram de cor entre um quadro e outro, ela entende que alguma coisa se mexeu.
+Um bom engenheiro de software é também um bom comunicador. Explicar uma ideia de forma simples ao colega, ao cliente ou a si mesmo seis meses depois é parte essencial do ofício.
+A história da computação está cheia de ideias que pareciam inúteis na época. Muitas só encontraram aplicação décadas depois, quando a tecnologia ao redor finalmente alcançou a imaginação.

@@ -21,6 +21,9 @@ export const KEYS = {
   progresso: "aprender.progresso", // { done: { [lessonId]: {wpm, acc, stars, date} }, current }
   stats: "praticar.stats", // { best, last, history[], count, sumWpm, sumAcc }
   pos: "biblioteca.pos", // { [bookId]: indice da frase }
+  lista: "biblioteca.lista", // legado: lista única (migrada para "biblioteca.listas")
+  listas: "biblioteca.listas", // [{id, name, books:[bookId]}] listas personalizadas
+  listaAtiva: "biblioteca.listaAtiva", // id da lista em edição na Biblioteca
   prefs: "praticar.prefs",
   tema: "tema",
   aba: "ultima.aba",

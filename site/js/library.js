@@ -82,6 +82,60 @@ export async function removeBook(id) {
   emit();
 }
 
+/* ---------- listas personalizadas ----------
+   localStorage "biblioteca.listas" = [{id, name, books:[bookId]}].
+   Além delas existe a lista automática "Livros adicionados" (ADDED_LIST): todos os livros enviados pelo usuário. */
+export const ADDED_LIST = "__adicionados__";
+export const ADDED_NAME = "Livros adicionados";
+
+function readLists() {
+  let lists = load(KEYS.listas, null);
+  if (!Array.isArray(lists)) {
+    lists = [];
+    const old = load(KEYS.lista, []); // migra a lista única da versão anterior
+    if (Array.isArray(old) && old.length) lists.push({ id: crypto.randomUUID(), name: "Minha lista", books: old });
+    save(KEYS.listas, lists);
+  }
+  return lists;
+}
+
+/** Listas personalizadas (só livros que ainda existem). */
+export function getLists() {
+  const have = new Set(listAll().map((b) => b.id));
+  return readLists().map((l) => ({ ...l, books: (l.books || []).filter((id) => have.has(id)) }));
+}
+/** Todas as listas usáveis em Praticar: as personalizadas + "Livros adicionados" (se houver). */
+export function getPracticeLists() {
+  const lists = getLists().filter((l) => l.books.length);
+  const added = listMine().map((b) => b.id);
+  return added.length ? [{ id: ADDED_LIST, name: ADDED_NAME, books: added }, ...lists] : lists;
+}
+export function getListBooks(listId) {
+  return getPracticeLists().find((l) => l.id === listId)?.books ?? [];
+}
+const cleanName = (n) => String(n || "").trim().replace(/\s+/g, " ").slice(0, 40);
+function writeLists(lists) { save(KEYS.listas, lists); emit(); }
+
+export function createList(name) {
+  const n = cleanName(name);
+  if (!n) return null;
+  const id = crypto.randomUUID();
+  writeLists([...readLists(), { id, name: n, books: [] }]);
+  return id;
+}
+export function renameList(id, name) {
+  const n = cleanName(name);
+  if (n) writeLists(readLists().map((l) => (l.id === id ? { ...l, name: n } : l)));
+}
+export function deleteList(id) { writeLists(readLists().filter((l) => l.id !== id)); }
+export function setListBooks(id, ids) {
+  writeLists(readLists().map((l) => (l.id === id ? { ...l, books: [...new Set(ids)] } : l)));
+}
+export function toggleInList(id, bookId, on) {
+  const l = getLists().find((x) => x.id === id);
+  if (l) setListBooks(id, on ? [...l.books, bookId] : l.books.filter((x) => x !== bookId));
+}
+
 export const getPos = (id) => load(KEYS.pos, {})[id] || 0;
 export function setPos(id, idx) {
   const pos = load(KEYS.pos, {});
