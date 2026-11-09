@@ -15,11 +15,12 @@ export function buildTypingCard(container, { hint = "" } = {}) {
       <div class="typing-display blurred" tabindex="-1"></div>
       <textarea class="typing-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Área de digitação"></textarea>
       <div class="typing-hint">${hint}</div>
+      <div class="typing-echo" aria-hidden="true"><span class="echo-label">Palavra que você está digitando</span><div class="echo-text"></div></div>
     </div>`;
   const q = (s) => container.querySelector(s);
   return {
     title: q(".t-title"), wpm: q(".t-wpm"), acc: q(".t-acc"), time: q(".t-time"),
-    display: q(".typing-display"), input: q(".typing-input"), hint: q(".typing-hint"),
+    display: q(".typing-display"), echo: q(".echo-text"), input: q(".typing-input"), hint: q(".typing-hint"),
   };
 }
 
@@ -185,8 +186,29 @@ export class Typer {
       else if (i === t.length) cls += " cur"; // posição atual: barra | piscando
       if (s.className !== cls) s.className = cls;
     }
+    this._renderEcho(t, f);
     const cur = this.spans[t.length];
     if (cur && cur.offsetTop > this.ui.display.clientHeight + this.ui.display.scrollTop - 40) cur.scrollIntoView({ block: "nearest" });
+  }
+
+  /** Caixa abaixo do texto: mostra só a palavra que está sendo digitada (esvazia ao fechar a palavra com espaço);
+   *  do 1º erro em diante, em vermelho (como no texto-alvo). */
+  _renderEcho(t, f) {
+    const echo = this.ui.echo;
+    if (!echo) return;
+    const ws = Math.max(t.lastIndexOf(" "), t.lastIndexOf("\n")) + 1; // início da palavra atual
+    const word = t.slice(ws);
+    const split = f < 0 ? word.length : Math.max(0, Math.min(word.length, f - ws));
+    echo.replaceChildren(document.createTextNode(word.slice(0, split)));
+    if (split < word.length) {
+      const b = document.createElement("span");
+      b.className = "bad";
+      b.textContent = word.slice(split);
+      echo.append(b);
+    }
+    echo.classList.toggle("empty", !t);
+    // a caixa fica abaixo da dica, muitas vezes fora da tela: ao digitar, rola só o suficiente para ela aparecer
+    if (t) echo.closest(".typing-echo").scrollIntoView({ block: "nearest" });
   }
 
   stats() {

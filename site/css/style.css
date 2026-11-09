@@ -319,6 +319,15 @@ input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--accent);
 .typing-display.code { font-size: 1.12rem; line-height: 1.9em; min-height: 8em; }
 .typing-display [data-nl]::before { content: ""; display: inline-block; width: .55em; height: .5em; margin-right: .25em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; opacity: .45; }
 .typing-input { position: absolute; opacity: 0; width: 1px; height: 1px; left: -9999px; }
+.typing-echo { margin-top: .6rem; }
+.echo-label { display: block; font-size: .75rem; font-weight: 500; color: var(--muted); margin-bottom: .25rem; }
+.echo-text {
+  font: 1.35rem/1.7em var(--mono); white-space: pre; color: var(--text); overflow: hidden; text-overflow: clip;
+  min-height: 2.6em; padding: .4rem 1rem .4rem .9rem; display: flex; align-items: center;
+  border: 1px solid var(--control); border-left: 4px solid var(--accent); border-radius: var(--sh3); background: var(--white);
+}
+.echo-text.empty::before { content: "A palavra que você digitar aparece aqui"; color: var(--muted); font-family: var(--font); font-size: .95rem; }
+.echo-text .bad { color: var(--bad-block-text); background: var(--bad-block); border-radius: 2px; }
 .typing-hint { color: var(--muted); font-size: .8rem; margin-top: .75rem; }
 
 /* ---------- resultado ---------- */
